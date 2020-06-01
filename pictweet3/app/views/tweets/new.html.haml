@@ -1,0 +1,11 @@
+.contents.row
+  .conteiner
+    = form_with model: @tweet, local: true do |form|
+      %h3
+        投稿する
+      -# = form.text_field :name, placeholder: "Nickname"
+      -# ↑ ユーザー登録時に入力して 表示されるようにしたので、毎回入力する必要がなくなった
+      -# 編集「edit.html.haml」も同様
+      = form.text_field :image, placeholder: "Image Url"
+      = form.text_area :text, placeholder: "text", rows: "10"
+      = form.submit "SEND"

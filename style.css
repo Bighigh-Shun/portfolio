@@ -1,0 +1,12 @@
+.header {
+  background-color: blue;
+}
+
+.main-contents {
+  background-color: aqua;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}

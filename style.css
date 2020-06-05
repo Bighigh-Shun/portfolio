@@ -1,19 +1,85 @@
 body {
-  
+  display: flex;
+  /* ↓高さを最低限 100vh に指定 */
+  min-height: 100vh;
 }
 
 main {
-
+  /* ↓横幅をいっぱいまで指定 */
+  flex: 1;
 }
 
 aside {
-
-}
-
-ul {
-
+  min-width: 250px;
+  /* ↓nav と div を横並びにして、縦にする */
+  display: flex;
+  flex-direction: column;
 }
 
 div {
+  height: 300px;
+  /* ↓ 上に空けれるだけ空ける */
+  margin-top: auto;
+}
 
+/* ↓ 見えなくする */
+.open,.close {
+  display: none;
+}
+
+/* checkbox も見えなくしたいが、「display:none;」を適用すると、ラベル属性とうまく連携しなくなる */
+/* 「display:none;」以外の方法で消す必要がある */
+
+input[type="checkbox"]{
+  /* ↓ これで、checkbox が隠れる */
+  position: absolute;
+  left: -50vw;
+}
+
+/* ↓ 条件分岐のようなもの。横幅が 1000px 以下になったら適用されるスタイル。*/
+@media screen and (max-width: 1000px) {
+  main {
+    width: 100%;
+    padding-top: 50px;
+  }
+  /* ↓ 元々適用されている「display:none」を書き換える */
+  .open,.close {
+    display: block;
+  }
+
+  .open {
+    position: absolute;
+  }
+
+  aside {
+    /* 「position: absolute」を設定すると、高さが失われる */
+    /* 「height」を与えてやる必要がある */
+    position: absolute;
+    left: -50vw;
+    height: 100%;
+
+    /* 「transition: all;」にて、全てのプロパティの変化について、アニメーションをつける */
+    /* アニメーションのスタートから終わりまでの時間 */
+    /* なるべく「0.3秒以内」が望ましい */
+    transition: all 0.1s;
+    /* 背景色は透明になっているので、色をつけてあげることで被らないようにする */
+    background: white;
+  }
+
+  /* 「checked擬似クラス」 */
+  /* 「checkbox」に チェック が入ったら、以下のプロパティが適用される */
+  input[type="checkbox"]:checked ~ aside {
+    left: 0;
+    /* 「transition」のおかげで、ニュッと出てくる */
+  }
+  input[type="checkbox"]:checked ~ .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  /* 間接セレクタ */
+  /* 「~」をつけることによって、以下の効果 */
+  /* ① ~ の前にある属性（今回の場合だと「input」）と同じ親要素を持ち、 */
+  /* ② 且つ 後にある要素に適用される*/
 }

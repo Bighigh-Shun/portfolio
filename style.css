@@ -1,30 +1,70 @@
 body {
   display: flex;
+  justify-content: start;
   /* ↓高さを最低限 100vh に指定 */
   min-height: 100vh;
+  position: relative;
 }
 
-main {
-  /* ↓横幅をいっぱいまで指定 */
-  flex: 1;
-}
+/* ーーーーーーーーーー ここから aside「共通」 ーーーーーーーーーー */
 
 aside {
-  min-width: 250px;
+  background-color: navy;
+  color: darkkhaki;
+  min-width: 225px;
   /* ↓nav と div を横並びにして、縦にする */
   display: flex;
   flex-direction: column;
+
+  /* 位置を左に固定 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  /* 透過 */
+  opacity: 0.6;
 }
 
-div {
-  height: 300px;
-  /* ↓ 上に空けれるだけ空ける */
-  margin-top: auto;
+.aside-title {
+  font-size: 15px;
 }
+
+a {
+  text-decoration: none;
+  color: darkkhaki;
+  font-size: 15px;
+}
+
+.list {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+
+}
+
+.insta-icon {
+  background-color: lightsalmon;
+}
+
+
 
 /* ↓ 見えなくする */
 .open,.close {
   display: none;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /* checkbox も見えなくしたいが、「display:none;」を適用すると、ラベル属性とうまく連携しなくなる */
@@ -40,7 +80,7 @@ input[type="checkbox"]{
 @media screen and (max-width: 1000px) {
   main {
     width: 100%;
-    padding-top: 50px;
+    /* padding-top: 50px; */
   }
   /* ↓ 元々適用されている「display:none」を書き換える */
   .open,.close {
@@ -63,7 +103,9 @@ input[type="checkbox"]{
     /* なるべく「0.3秒以内」が望ましい */
     transition: all 0.1s;
     /* 背景色は透明になっているので、色をつけてあげることで被らないようにする */
-    background: white;
+    background: navy;
+    color: darkkhaki;
+    opacity: 0.8;
   }
 
   /* 「checked擬似クラス」 */
@@ -83,3 +125,48 @@ input[type="checkbox"]{
   /* ① ~ の前にある属性（今回の場合だと「input」）と同じ親要素を持ち、 */
   /* ② 且つ 後にある要素に適用される*/
 }
+
+/* ーーーーーーーーーー ここから aside-top ーーーーーーーーーー */
+
+
+
+
+
+
+
+/* ーーーーーーーーーー ここから aside-bottom ーーーーーーーーーー */
+
+.aside-bottom {
+  height: 200px;
+  /* ↓ 上に空けれるだけ空ける */
+  margin-top: auto;
+}
+
+
+
+
+
+/* ーーーーーーーーーー ここから main ーーーーーーーーーー */
+
+
+main {
+  /* ↓横幅をいっぱいまで指定 */
+  flex: 1;
+}
+
+.first-view {
+  width: 100%;
+  height: 100vh;
+  background-image: url(world-view.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.first-message {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  font-size: 45px;
+}
+

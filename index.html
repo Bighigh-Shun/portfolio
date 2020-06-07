@@ -7,33 +7,66 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
+
   <body>
     <!-- ハンバーガーメニュー -->
-    <input id="menu" type="checkbox" />
+    <input id="menu" type="checkbox"/>
     <label for="menu" class="open">≡</label>
     <label for="menu" class="back"></label>
 
 
-    <aside class="aside">
-
+    <aside>
       <label for="menu" class="close">×</label>
-    
-      <nav>
-        <ul>
-          <li>list1</li>
-          <li>list2</li>
-          <li>list3</li>
-          <li>list4</li>
-          <li>list5</li>
+
+      <!-- 「MENU」のサイドバー -->
+      <nav class="aside-top">
+        <ul class="lists"><h1 class="aside-title">~ MENU ~</h1>
+          <li class="list"><a href="http://18.180.118.52/" class="link">FURIMA</a></li>
+          <li class="list"><a href="#" class="link">Chat Space</a></li>
         </ul>
       </nav>
-      <div>
-        side footer
-      </div>
+
+      <!-- 「SNS」のサイドバー -->
+      <nav class="aside-bottom">
+        <ul class="lists"><h1 class="aside-title">~ SNS ~</h1>
+          <li class="list">
+            <image src="f_logo_RGB-Blue_100.png" alt="Facebook のアイコン" class="icon">
+            <a href="https://www.facebook.com/BighighHorse" class="link">本人についてはこちら</a>
+          </li>
+          <li class="list">
+            <image src="Twitter_Social_Icon_Rounded_Square_Color.png" alt="Twitter のアイコン" class="icon">
+            <a href="https://twitter.com/bighigh0309" class="link">技術的な発信はこちら</a>
+          </li>
+          <li class="list">
+            <image src="glyph-logo_May2016.png" alt="Instagram のアイコン" class="icon insta-icon">
+            <a href="https://www.instagram.com/bighigh_horse/" class="link">ご飯についてはこちら</a>
+          </li>
+        </ul>
+      </nav>
+
     </aside>
 
+
+
+
     <main class="main-contents">
-      <div>メインコンテンツです！</div>
+
+      <div class="first-view">
+        <h1 class="first-message">Welcome to my portfolio site!!</h1>
+      </div>
+
+      <!-- <div class="second-view">
+
+        <h1 class="second-message"></h1>
+
+        <div class="sv-contents">
+          <div class="sv-content">
+            <image></image>
+            <h2 class="image-text"></h2>
+          </div>
+        </div>
+
+      </div> -->
     </main>
 
   </body>

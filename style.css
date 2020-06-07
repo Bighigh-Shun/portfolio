@@ -1,9 +1,24 @@
 body {
+
+  /* アニメーション */
+  animation: fadeIn 5s ease 1s 1 normal;
+  -webkit-animation: fadeIn 5s ease 1s 1 normal;
+
   display: flex;
   justify-content: start;
   /* ↓高さを最低限 100vh に指定 */
   min-height: 100vh;
   position: relative;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
 
 /* ーーーーーーーーーー ここから aside「共通」 ーーーーーーーーーー */
@@ -23,7 +38,7 @@ aside {
   height: 100vh;
 
   /* 透過 */
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 .aside-title {
@@ -169,4 +184,3 @@ main {
   top: 50px;
   font-size: 45px;
 }
-

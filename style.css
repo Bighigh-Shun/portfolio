@@ -1,8 +1,8 @@
 body {
 
   /* アニメーション */
-  animation: fadeIn 5s ease 1s 1 normal;
-  -webkit-animation: fadeIn 5s ease 1s 1 normal;
+  animation: fadeIn 3s ease 1s 1 normal;
+  -webkit-animation: fadeIn 3s ease 1s 1 normal;
 
   display: flex;
   justify-content: start;
@@ -24,6 +24,12 @@ body {
 /* ーーーーーーーーーー ここから aside「共通」 ーーーーーーーーーー */
 
 aside {
+
+  /* アニメーション */
+  /* animation: fadeIn 5s ease 6s 1 normal; */
+  /* -webkit-animation: fadeIn 5s ease 6s 1 normal; */
+
+
   background-color: navy;
   color: darkkhaki;
   min-width: 225px;

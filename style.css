@@ -22,24 +22,24 @@ body {
 } */
 
 /* 透過を 0 → 1 へと濃くする関数 */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0
   }
   to {
     opacity: 1;
   }
-}
+} */
 
 /* safari対応 */
-@-webkit-keyframes fadeIn {
+/* @-webkit-keyframes fadeIn {
   from {
     opacity: 0
   }
   to {
     opacity: 1;
   }
-}
+} */
 
 
 /* ーーーーーーーーーー ここから aside「共通」 ーーーーーーーーーー */
@@ -154,7 +154,7 @@ input[type="checkbox"]{
 
   /* 「checked擬似クラス」 */
   /* 「checkbox」に チェック が入ったら、以下のプロパティが適用される */
-  input[type="checkbox"]:checked ~ aside {
+  input[type="checkbox"]:checked ~ .aside {
     left: 0;
     /* 「transition」のおかげで、ニュッと出てくる */
   }
